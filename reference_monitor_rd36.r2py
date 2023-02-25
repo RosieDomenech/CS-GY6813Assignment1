@@ -37,7 +37,7 @@ class ABFile():
   def writeat(self,data,offset):
     #Lock creation
     self.lock = createlock()
-    self.lock.acquire(True)
+    self.lock.acquire(False)
 
     #validating the write call
     if offset < 0:
@@ -56,7 +56,7 @@ class ABFile():
   def readat(self,bytes,offset):
   #Lock creation
     self.lock = createlock()
-    self.lock.acquire(True)
+    self.lock.acquire(False)
 
     #validating the read call
     length = len(self.Afile.readat(None,0))
