@@ -1,3 +1,13 @@
+"""
+This security layer inadequately handles A/B storage for files in RepyV2.
+
+
+
+Note:
+    This security layer uses encasementlib.r2py, restrictions.default, repy.py and Python
+    Also you need to give it an application to run.
+    python repy.py restrictions.default encasementlib.r2py [security_layer].r2py [attack_program].r2py
+
 TYPE="type"
 ARGS="args"
 RETURN="return"
@@ -118,4 +128,3 @@ CHILD_CONTEXT_DEF["ABopenfile"] = {TYPE:OBJC,ARGS:(str,bool),EXCP:Exception,RETU
 # Execute the user code
 secure_dispatch_module()
 
-#testing losing my shit
