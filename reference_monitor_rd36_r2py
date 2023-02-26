@@ -18,10 +18,10 @@ class ABFile():
     # make the files and add 'SE' to the readat file...
     if create:  ## this case we need to create a new file
         self.Afile = openfile(self.Afn, create)
-    self.Bfile = openfile(self.Bfn, create)
-    self.Afile.writeat('SE', 0)  ## empty file, but contains S and E
+            self.Bfile = openfile(self.Bfn, create)
+            self.Afile.writeat('SE', 0)  ## empty file, but contains S and E
     else:
-    self.Afile = openfile(self.Afn, True)
+            self.Afile = openfile(self.Afn, True)
     f = openfile(filename, create)
     self.Afile.writeat('SE', 0)
     self.Afile.writeat(f.readat(None, 0), 1)  ## copy everything in filename to
